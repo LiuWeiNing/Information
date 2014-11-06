@@ -1,0 +1,54 @@
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/list.js"></script>
+<title id="title">Notice</title>
+<body>
+	<div class="row">
+		<form class="form-search">
+			<div class="col-lg-6">
+				<div class="input-group">
+					<input type="text" class="form-control"> <span
+						class="input-group-btn">
+						<button class="btn btn-default" type="button">搜索</button>
+					</span>
+				</div>
+				<!-- /input-group -->
+			</div>
+			<!-- /.col-lg-6 -->
+		</form>
+		<div>
+			<button class="btn btn-success pull-right add-btn" id="notice-add">
+				<span class="glyphicon glyphicon-plus"></span> 添加通知
+			</button>
+		</div>
+	</div>
+	<br />
+	<div class="table-responsive">
+		<table class="table table-hover" id="titleList">
+			<thead>
+			</thead>
+			<tbody id="showList">
+		
+			</tbody>
+
+		</table>
+	</div>
+	<ul class="pager pull-right">
+		<li><a href="#" id= "previous">前一页</a></li>
+		<li><a href="#" id= "next">后一页</a></li>
+	</ul>
+</body>
+<script type="text/javascript">
+	$("#notice-add").click(function() {
+		$("#frame").load('Notice-add.html');
+	});
+	$(".notice-edit-button").click(function() {
+		$("#frame").load('Notice-edit.html');
+	});
+</script>
+</html>

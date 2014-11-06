@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>科创信息平台</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="jquery.confirm/jquery.confirm.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script charset="utf-8" src="js/index.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="jquery.confirm/jquery.confirm.css" />
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/starter-template.css" rel="stylesheet">
+<link type="text/css" href="css/sticky-footer.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+@media ( max-width : 768px) {
+	.add-btn {
+		margin-top: 10px;
+		margin-right: 14px;
+	}
+}
+</style>
+<link rel="shortcut icon" href="img/icon.png">
+</head>
+<body>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" 
+               aria-hidden="true">×
+            </button>
+            <font color="red"><h2 class="modal-title" id="myModalLabel" ></h2></font> 
+               
+            
+         </div>
+         <div class="modal-body">
+           <font color="red"><h4 id = "modalContent"></h4></font> 
+         
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">
+               确定
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+</div>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">科创信息平台</a>
+			</div>
+			<div class="collapse navbar-collapse"></div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>
+				<strong>科创信息平台</strong><small> 科学创新，就在你我身边</small>
+			</h1>
+
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row"></div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-3">
+				<div class="list-group">
+					<a href="#" class="list-group-item active" id="news-all"> 学院新闻
+					</a> <a href="#" class="list-group-item" id="project-all">项目信息</a> <a
+						href="#" class="list-group-item" id="knowledge-all">知识库</a> <a
+						href="#" class="list-group-item" id="notice-all">学院通知</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-9" id="frame">
+				<!--这里不停切换表格-->
+			</div>
+		</div>
+
+	</div>
+	<!-- /.container -->
+	<hr>
+	<div class="footer">
+		<div class="container">
+			<p class="text-muted">© 我们 2014</p>
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!--<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>-->
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(e) {
+            $("#frame").load("News-list.html");
+			
+			$("#news-all").click(function(){
+				$("#frame").load('News-list.html');
+				$("#news-all").addClass("active");
+				$("#project-all").removeClass("active");
+				$("#knowledge-all").removeClass("active");
+				$("#notice-all").removeClass("active");
+				});
+				
+			$("#project-all").click(function(){
+				$("#frame").load('Project-list.html');
+				$("#project-all").addClass("active");
+				$("#news-all").removeClass("active");
+				$("#knowledge-all").removeClass("active");
+				$("#notice-all").removeClass("active");
+				});
+				
+			$("#knowledge-all").click(function(){
+				$("#frame").load('Knowledge-list.html');
+				$("#knowledge-all").addClass("active");
+				$("#news-all").removeClass("active");
+				$("#project-all").removeClass("active");
+				$("#notice-all").removeClass("active");
+				});
+			
+			$("#notice-all").click(function(){
+				$("#frame").load('Notice-list.html');
+				$("#notice-all").addClass("active");
+				$("#news-all").removeClass("active");
+				$("#project-all").removeClass("active");
+				$("#knowledge-all").removeClass("active");
+				});
+			});
+    </script>
+</body>
+</html>

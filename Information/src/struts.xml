@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" namespace="/" extends="json-default">
+		<action name="adminLogin" class="Action.AdminLoginAction" method="login">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="login" class="Action.AndroidAction" method="Login">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name = "EditUser" class="Action.AndroidAction" method="EditUserInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name = "EditResume" class="Action.AndroidAction" method="EditResume">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name = "FindMyPsd" class="Action.AndroidAction" method="FindMyPsd">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="requestTitle" class="Action.EditAction" method="RequestTitle">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="register" class="Action.AndroidAction" method="Register">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="GetUserInfo" class="Action.AndroidAction" method="getUserInfo">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="GetResume" class="Action.AndroidAction" method="getResume">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="delete" class="Action.EditAction" method="Delete">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getContent" class="Action.EditAction" method="getContent">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAllTitle" class="Action.EditAction" method="getAllTitle">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="addNews" class="Action.AddAction" method="addNews">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="addNotice" class="Action.AddAction" method="addNotice">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="addProject" class="Action.AddAction" method="addProject">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="addKnowledge" class="Action.AddAction" method="addKnowledge">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+
+</struts>    
